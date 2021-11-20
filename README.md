@@ -1,4 +1,4 @@
-# farma_stock
+# Pharma_stock_application
 
 A new Flutter project.
 
