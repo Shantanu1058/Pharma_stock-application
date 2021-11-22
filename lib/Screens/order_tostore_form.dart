@@ -19,8 +19,6 @@ class _OrderFormState extends State<OrderForm> {
   bool loading = false;
   final TextEditingController nameController = TextEditingController();
   final TextEditingController quantityController = TextEditingController();
-  final TextEditingController contactController = TextEditingController();
-  final TextEditingController imageController = TextEditingController();
   final _nameFocusNode = FocusNode();
   // final _directorFocusNode = FocusNode();
   GlobalKey<FormState> formkey = GlobalKey<FormState>();
