@@ -48,6 +48,7 @@ class _OrderFormState extends State<OrderForm> {
         headers: {"Content-Type": "application/json"});
 
     Map Data = json.decode(response.body);
+    print(Data);
     if (Data["success"] == 1) {
       Fluttertoast.showToast(msg: "Order Placed");
     } else {
