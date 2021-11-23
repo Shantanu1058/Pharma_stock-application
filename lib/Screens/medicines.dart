@@ -39,6 +39,7 @@ class _MedicinesState extends State<Medicines> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.amber,
         onPressed: () {
           Navigator.push(
               context,
