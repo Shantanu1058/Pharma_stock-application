@@ -36,6 +36,9 @@ class _OrderFormState extends State<OrderForm> {
   }
 
   Future supplyMedicine(String name, String quantity) async {
+    if (int.parse(quantity) > msData["quantity"]) {
+      Fluttertoast.showToast(msg: "Please Enter The Correct Quantity");
+    }
     var url =
         'https://dbmsapi.herokuapp.com/api/medicine/supplyMedicineToStore';
     var response = await http.post(Uri.parse(url),
@@ -202,6 +205,9 @@ class _OrderFormState extends State<OrderForm> {
       validator: (value) {
         if (value!.isEmpty) {
           return "Please Enter The Name of Medicine";
+        }
+        if (int.parse(value) > msData["quantity"]) {
+          return "Please Enter The Correct Quantity";
         }
         return null;
       });
